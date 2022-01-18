@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xculture/pages/detail_page.dart';
+import 'package:flutter_xculture/pages/post_page.dart';
 import 'pages/main_page.dart';
 
 void main() {
@@ -28,7 +29,8 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
       ),
       //home: MainPage(),
-      home: DetailPage(),
+      //home: DetailPage(),
+      home: PostPage(),
     );
   }
 }
