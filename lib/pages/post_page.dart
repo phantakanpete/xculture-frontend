@@ -47,12 +47,6 @@ class _PostPageState extends State<PostPage> {
                     ),
                   ),
                 ),
-                validator: (value) {
-                  if (value != null && value.trim().length < 3) {
-                    return 'This field requires a minimum of 3 characters';
-                  }
-                  return null;
-                },
               ),
               const SizedBox(height: 20),
               TextFormField(
