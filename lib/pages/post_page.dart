@@ -94,8 +94,8 @@ class _PostPageState extends State<PostPage> {
                 ],
               ),
               const SizedBox(height: 20),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
+              Wrap(
+                crossAxisAlignment: WrapCrossAlignment.start,
                 children: arr.map((e) => Padding(
                   padding: const EdgeInsets.only(right: 10),
                   child: Chip(
@@ -137,13 +137,16 @@ class _PostPageState extends State<PostPage> {
               ),
               const SizedBox(height: 20),
               ElevatedButton(
-                style: ElevatedButton.styleFrom(
-                  minimumSize: const Size(350, 50),
-                ),
                 onPressed: (){
                   Fluttertoast.showToast(msg: "Your post have been created.");
                 }, 
-                child: const Text("Post Now")
+                child: const SizedBox(
+                  width: double.infinity,
+                  height: 50,
+                  child: Center(
+                    child: Text("Post Now")
+                  ),
+                ),
               ),
               const SizedBox(height: 50),
             ],
