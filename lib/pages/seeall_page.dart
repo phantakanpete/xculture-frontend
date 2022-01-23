@@ -8,24 +8,88 @@ class SeeallPage extends StatefulWidget {
 }
 
 class _SeeallPageState extends State<SeeallPage> {
+
+  String? value;
+  List sortList = [
+    "Newest",
+    "Oldest",
+    "Most Viewed",
+    "Most Favorited"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Center(
-          child: Text(
-            "Forum",
-            style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),
-          ),
+        centerTitle: true,
+        leading: const Icon(Icons.arrow_back),
+        title: const Text("Forum",
+          style: TextStyle(fontWeight: FontWeight.bold, color: Colors.white, fontSize: 25),
         ),
       ),
       body: Column(
         children: [
+          const SizedBox(height: 20),
           Container(
             alignment: Alignment.centerLeft,
-            padding: const EdgeInsets.all(10.0),
-            child: const Text("Forum", style: TextStyle(fontSize: 25),)
+            padding: const EdgeInsets.only(left: 20),
+            child: const Text("Trending Forum", style: TextStyle(fontSize: 20)),
           ),
+          Container(
+            alignment: Alignment.centerLeft,
+            padding: const EdgeInsets.symmetric(horizontal: 10),
+            child: Row(
+              children: [
+                Expanded(
+                  child: TextFormField(
+                    decoration: InputDecoration(
+                      hintText: "Search Here...",
+                      enabledBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      focusedBorder: OutlineInputBorder(
+                        borderSide: const BorderSide(
+                          color: Colors.transparent,
+                        ),
+                        borderRadius: BorderRadius.circular(10),
+                      ),
+                      prefixIcon: const Icon(Icons.search, color: Colors.red),
+                    ),
+                  ),
+                ),
+                DropdownButtonHideUnderline(
+                  child: Container(
+                    height: 30,
+                    padding: const EdgeInsets.symmetric(horizontal: 10),
+                    decoration: BoxDecoration(
+                      color: Colors.grey[300],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: DropdownButton(
+                      hint: const Text("Sort by..."),
+                      icon: const Icon(Icons.arrow_drop_down),
+                      items: sortList.map((value){
+                        return DropdownMenuItem(
+                          value: value,
+                          child: Text(value),
+                        );
+                      }).toList(),
+                      value: value,
+                      onChanged: (value) {
+                        setState(() {
+                          this.value = value as String?;
+                        });
+                      }
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+          const SizedBox(height: 10),
           Expanded(
             child: ListView.builder(
               itemCount: 15,
@@ -59,7 +123,7 @@ class _SeeallPageState extends State<SeeallPage> {
                                         ),
                                       ),
                                       Padding(padding: EdgeInsets.only(bottom: 2.0)),
-                                      Text("Meanning of Halloween",
+                                      Text("Meaning of Halloween",
                                         maxLines: 2,
                                         overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
