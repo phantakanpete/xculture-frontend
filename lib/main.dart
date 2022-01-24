@@ -30,9 +30,9 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
       ),
       //home: MainPage(),
-      //home: DetailPage(),
+      home: DetailPage(),
       //home: PostPage(),
-      home: SeeallPage(),
+      //home: SeeallPage(),
     );
   }
 }
