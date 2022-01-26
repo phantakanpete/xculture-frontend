@@ -17,6 +17,12 @@ class _SeeallPageState extends State<SeeallPage> {
     "Most Favorited"
   ];
 
+  List<String> arr = [
+    "Hoooo",
+    "Leeee",
+    "Sheet"
+  ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -97,42 +103,51 @@ class _SeeallPageState extends State<SeeallPage> {
                 return Padding(
                   padding: const EdgeInsets.all(20.0),
                   child: SizedBox(
-                    height: 100,
+                    height: 150,
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
                         AspectRatio(
-                          aspectRatio: 1.0,
+                          aspectRatio: 0.7,
                           child: Image.asset("assets/images/preetoe.jpg"),
-                        ),
+                        ), 
                         Expanded(
                           child: Padding(
                             padding: const EdgeInsets.fromLTRB(20.0, 0.0, 2.0, 0.0),
                             child: Column(
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: [
-                                Expanded(
-                                  child: Column(
-                                    crossAxisAlignment: CrossAxisAlignment.start,
-                                    children: const [
-                                      Text("Lorem Ipsu Lorem Ipsu Lorem Ipsu",
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          fontWeight: FontWeight.bold,
-                                        ),
+                                Column(
+                                  crossAxisAlignment: CrossAxisAlignment.start,
+                                  children: [
+                                    const Text("Lorem Ipsu Lorem Ipsu Lorem Ipsu",
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontWeight: FontWeight.bold,
                                       ),
-                                      Padding(padding: EdgeInsets.only(bottom: 2.0)),
-                                      Text("Meaning of Halloween",
-                                        maxLines: 2,
-                                        overflow: TextOverflow.ellipsis,
-                                        style: TextStyle(
-                                          fontSize: 12.0,
-                                          color: Colors.black,
-                                        ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    const Text("Meaning of Halloween",
+                                      maxLines: 2,
+                                      overflow: TextOverflow.ellipsis,
+                                      style: TextStyle(
+                                        fontSize: 12.0,
+                                        color: Colors.black,
                                       ),
-                                    ],
-                                  ),
+                                    ),
+                                    const SizedBox(height: 5),
+                                    Wrap(
+                                      crossAxisAlignment: WrapCrossAlignment.start,
+                                      children: arr.map((e) => Padding(
+                                        padding: const EdgeInsets.only(right: 10),
+                                        child: Chip(
+                                          visualDensity: const VisualDensity(horizontal: -4, vertical: -4), // Chip size -4 -> 4
+                                          label: Text(e),
+                                        ),
+                                      )).toList(),
+                                    ),
+                                  ],
                                 ),
                                 Expanded(
                                   child: Column(
