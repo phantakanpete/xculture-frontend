@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_xculture/pages/detail_page.dart';
-import 'package:flutter_xculture/pages/post_page.dart';
-import 'package:flutter_xculture/pages/seeall_page.dart';
+import 'package:flutter_xculture/pages/forum/detail_page.dart';
+import 'package:flutter_xculture/pages/event/eventpost_page.dart';
+import 'package:flutter_xculture/pages/forum/post_page.dart';
+import 'package:flutter_xculture/pages/forum/seeall_page.dart';
 import 'pages/main_page.dart';
 
 void main() {
@@ -30,9 +31,10 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
       ),
       //home: MainPage(),
-      home: DetailPage(),
+      //home: DetailPage(),
       //home: PostPage(),
       //home: SeeallPage(),
+      home: EventPostPage(),
     );
   }
 }

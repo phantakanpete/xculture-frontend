@@ -35,7 +35,7 @@ class _DetailPageState extends State<DetailPage> {
                 height: 300,
                 decoration: const BoxDecoration(
                   image: DecorationImage(
-                    image: AssetImage("assets/images/valorant.png"),
+                    image: AssetImage("assets/images/doge-dog-texture-sobaka.jpg"),
                     fit: BoxFit.cover, 
                   ),
                 ),

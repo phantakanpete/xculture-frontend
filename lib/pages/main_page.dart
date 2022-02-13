@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xculture/pages/commu_page.dart';
 import 'package:flutter_xculture/pages/event_page.dart';
-import 'package:flutter_xculture/pages/home_page.dart';
+import 'package:flutter_xculture/pages/forum/home_page.dart';
 import 'package:flutter_xculture/pages/menu_page.dart';
 import 'package:flutter_xculture/pages/search_page.dart';
 

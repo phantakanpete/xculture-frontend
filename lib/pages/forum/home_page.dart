@@ -70,28 +70,28 @@ class _HomePageState extends State<HomePage> {
                               ),
                               image: DecorationImage(
                                 fit: BoxFit.fill,
-                                image: AssetImage("assets/images/valorant.png") // Forum Image
+                                image: AssetImage("assets/images/doge-dog-texture-sobaka.jpg") // Forum Image
                               ),
                             ),
                           )
                         ),
-                        Positioned(
-                          top: 140,
-                          left: 20,
-                          child: Container(
-                            child: Column(
-                              crossAxisAlignment: CrossAxisAlignment.start,
-                              children: const [
-                                Text(
-                                  "Jaikere",
-                                  style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), // Forum Title
-                                ),
-                                Text(
-                                  "Jaikere",
-                                  style: TextStyle(fontSize: 15), // Forum Subtitle
-                                ),
-                              ],
-                            ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 140, left: 20, right: 0, bottom: 0),
+                          /* top: 140,
+                          left: 20, */
+                          child: Column(
+                            crossAxisAlignment: CrossAxisAlignment.start,
+                            children: const [
+                              Text(
+                                "Lorem Ipsum is a simply Lorem Ipsum is a simply",
+                                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20),
+                                overflow: TextOverflow.ellipsis, // Forum Title
+                              ),
+                              Text(
+                                "Kazuya",
+                                style: TextStyle(fontSize: 15), // Forum Subtitle
+                              ),
+                            ],
                           )
                         )
                       ],
@@ -162,11 +162,11 @@ class _HomePageState extends State<HomePage> {
                               crossAxisAlignment: CrossAxisAlignment.start,
                               children: const [
                                 Text(
-                                  "Jaikere",
+                                  "Lorem Ipsum is a simply",
                                   style: TextStyle(fontWeight: FontWeight.bold, fontSize: 20), // Forum Title
                                 ),
                                 Text(
-                                  "Jaikere",
+                                  "Lorem",
                                   style: TextStyle(fontSize: 15), // Forum Subtitle
                                 ),
                               ],
