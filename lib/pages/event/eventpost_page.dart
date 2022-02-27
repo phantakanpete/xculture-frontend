@@ -40,23 +40,38 @@ class _EventPostPageState extends State<EventPostPage> {
                 TextForm(label: "District"),
                 TextForm(label: "Province"),
                 TextForm(label: "ZIP Code"),
-                Row(
-                  children: [
-                    const Text("Upload Thumbnail", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
-                    IconButton(onPressed: (){}, icon: Icon(Icons.upload_file)),
-                  ],
-                ),
+                // Row(
+                //   children: [
+                //     const Text("Upload Thumbnail", style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                //     IconButton(onPressed: (){}, icon: Icon(Icons.upload_file)),
+                //   ],
+                // ),
+                TextForm(label: "Upload Thumbnail URL"),
                 TextForm(label: "Topic"),
-                TextForm(label: "Details", isMultiText: true),
+                TextForm(label: "Description", isMultiText: true),
                 Row(
                   children: [
                     Expanded(
-                      child: TextForm(label: "Start Date")
+                      child: TextForm(label: "Start Date DD/MM/YY")
                     ),
                     IconButton(onPressed: (){}, icon: Icon(Icons.event)),
-                    SizedBox(width: 100),
+                    const SizedBox(width: 100),
                   ],
                 ),
+                const SizedBox(height: 20),
+                ElevatedButton(
+                  onPressed: (){
+                    //Post event
+                  }, 
+                  child: const SizedBox(
+                    width: double.infinity,
+                    height: 50,
+                    child: Center(
+                      child: Text("Post Now")
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 50),
               ],
             ),
           ),

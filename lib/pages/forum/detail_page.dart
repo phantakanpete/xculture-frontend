@@ -81,10 +81,6 @@ class _DetailPageState extends State<DetailPage> {
             // Details/Contents
             Container(
               margin: const EdgeInsets.only(top: 280, left: 0, right: 0, bottom: 0),
-              /* top: 280,
-              left: 0,
-              right: 0,
-              bottom: 0, */
               child: Container(
                 padding: const EdgeInsets.only(left: 20, right: 20, top: 20),
                 width: MediaQuery.of(context).size.width,

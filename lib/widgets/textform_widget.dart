@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 
+// ignore: must_be_immutable
 class TextForm extends StatelessWidget {
   final String label;
   bool? isMultiText; 
@@ -15,16 +16,16 @@ class TextForm extends StatelessWidget {
       child: isMultiText==false?TextFormField(
         decoration: InputDecoration(
           labelText: label,
-          labelStyle: TextStyle(color: Colors.grey),
-          border: OutlineInputBorder(),
+          labelStyle: const TextStyle(color: Colors.grey),
+          border: const OutlineInputBorder(),
         ),
       ):TextFormField(
         maxLines: 10,
         keyboardType: TextInputType.multiline,
         decoration: InputDecoration(
           hintText: label,
-          hintStyle: TextStyle(color: Colors.grey),
-          border: OutlineInputBorder(),
+          hintStyle: const TextStyle(color: Colors.grey),
+          border: const OutlineInputBorder(),
         ),
       ),
     );
