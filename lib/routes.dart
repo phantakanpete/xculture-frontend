@@ -1,5 +1,6 @@
 import 'package:flutter/widgets.dart';
 import 'package:flutter_xculture/pages/forum/home_page.dart';
+import 'package:flutter_xculture/pages/profile/profile_screen.dart';
 import 'package:flutter_xculture/pages/sign_up/sign_up_screen.dart';
 import 'package:flutter_xculture/pages/signin/sign_in_screen.dart';
 import 'package:flutter_xculture/pages/splash/splash_screen.dart';
@@ -20,5 +21,5 @@ final Map<String, WidgetBuilder> routes = {
   SignUpScreen.routeName: (context) => SignUpScreen(),
   //HomeScreen.routeName: (context) => HomeScreen(),
   //HomePage.routeName: (context) => HomePage(),
-  //ProfileScreen.routeName: (context) => ProfileScreen(),
+  ProfileScreen.routeName: (context) => ProfileScreen(),
 };

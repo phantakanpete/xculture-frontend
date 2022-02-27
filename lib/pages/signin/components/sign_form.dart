@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xculture/helper/keyboard.dart';
+import 'package:flutter_xculture/pages/profile/profile_screen.dart';
 import 'package:flutter_xculture/pages/splash/splash_screen.dart';
 import 'package:flutter_xculture/widgets/custom_surfix_icon.dart';
 import 'package:flutter_xculture/widgets/default_button.dart';
@@ -58,7 +59,7 @@ class _SignFormState extends State<SignForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 KeyboardUtil.hideKeyboard(context);
-                     Navigator.pushNamed(context, SplashScreen.routeName);//Go to forum page
+                     Navigator.pushNamed(context, ProfileScreen.routeName);//Go to forum page
               }
             },
           ),

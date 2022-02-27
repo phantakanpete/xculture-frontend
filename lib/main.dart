@@ -6,6 +6,7 @@ import 'package:flutter_xculture/pages/forum/detail_page.dart';
 import 'package:flutter_xculture/pages/event/eventpost_page.dart';
 import 'package:flutter_xculture/pages/forum/post_page.dart';
 import 'package:flutter_xculture/pages/forum/seeall_page.dart';
+import 'package:flutter_xculture/pages/profile/profile_screen.dart';
 import 'package:flutter_xculture/pages/splash/splash_screen.dart';
 import 'package:flutter_xculture/routes.dart';
 import 'package:flutter_xculture/theme.dart';
@@ -45,9 +46,11 @@ class MyApp extends StatelessWidget {
       //home: EventDetailPage(),
       //home: CommuPostPage(),
       //home: CommuDetailPage(),
+      //home: ProfileScreen(),
       //signin - signup
       initialRoute: SplashScreen.routeName,
       routes: routes,
+      //home: ProfileScreen(),
     );
   }
 }

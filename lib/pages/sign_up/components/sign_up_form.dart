@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_xculture/pages/profile/profile_screen.dart';
 import 'package:flutter_xculture/pages/splash/splash_screen.dart';
 import 'package:flutter_xculture/widgets/custom_surfix_icon.dart';
 import 'package:flutter_xculture/widgets/default_button.dart';
@@ -55,7 +56,7 @@ class _SignUpFormState extends State<SignUpForm> {
               if (_formKey.currentState!.validate()) {
                 _formKey.currentState!.save();
                 // if all are valid then go to success screen
-                      Navigator.pushNamed(context, SplashScreen.routeName);
+                      Navigator.pushNamed(context, ProfileScreen.routeName);
               }
             },
           ),
