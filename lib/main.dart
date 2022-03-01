@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xculture/pages/community/commudetail_page.dart';
+import 'package:flutter_xculture/pages/community/commuhome_page.dart';
 import 'package:flutter_xculture/pages/community/commupost_page.dart';
 import 'package:flutter_xculture/pages/event/eventdetail_page.dart';
+import 'package:flutter_xculture/pages/event/eventhome_page.dart';
 import 'package:flutter_xculture/pages/forum/detail_page.dart';
 import 'package:flutter_xculture/pages/event/eventpost_page.dart';
 import 'package:flutter_xculture/pages/forum/post_page.dart';
@@ -46,7 +48,8 @@ class MyApp extends StatelessWidget {
       //home: EventDetailPage(),
       //home: CommuPostPage(),
       //home: CommuDetailPage(),
-      //home: ProfileScreen(),
+      //home: EventHomePage(),
+      //home: CommuHomePage(),
       //signin - signup
       initialRoute: SplashScreen.routeName,
       routes: routes,
