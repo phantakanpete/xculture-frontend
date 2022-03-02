@@ -22,8 +22,48 @@ class _CommuHomePageState extends State<CommuHomePage> {
         body: SingleChildScrollView(
           child: Column(
             children: [
-              const Text("Community",
-                style: TextStyle(fontWeight: FontWeight.bold, fontSize: 30),
+               Container(
+                margin: const EdgeInsets.all(10),
+                child: Row(
+                  children: const [
+                    Text("Your Community",
+                      style: TextStyle(fontWeight: FontWeight.bold, color: Colors.red, fontSize: 22),
+                    ),
+                    Spacer(),
+                    Text("See all"),
+                  ],
+                ),
+              ),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 20),
+                child: Container(
+                  height: 70,
+                  decoration: BoxDecoration(
+                    color: Colors.lightBlue[100],
+                    borderRadius: BorderRadius.circular(20)
+                  ),
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.symmetric(horizontal: 20),
+                        child: CircleAvatar(
+                          backgroundColor: Colors.black,
+                          radius: 20,
+                          child: Image.asset("assets/images/valorant.png"),
+                        ),
+                      ),
+                      Expanded(
+                        child: Text("Bacon",
+                          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),  
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(right: 10),
+                        child: IconButton(onPressed: (){}, icon: Icon(Icons.arrow_forward_ios)),
+                      ),
+                    ],
+                  ),
+                ),
               ),
               const SizedBox(height: 20),
               Container(
@@ -107,7 +147,6 @@ class _CommuHomePageState extends State<CommuHomePage> {
                   }
                 ),
               ),
-
               const SizedBox(height: 20),
               Container(
                 margin: const EdgeInsets.all(10),
